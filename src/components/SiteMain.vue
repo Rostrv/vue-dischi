@@ -34,14 +34,11 @@
     </div>
   </main>
 </template>
-
 <script>
 import axios from "axios";
 import state from "@/state.js";
-
 export default {
   name: "SiteMain",
-
   data() {
     return {
       API_URL: "https://flynn.boolean.careers/exercises/api/array/music",
@@ -65,19 +62,20 @@ export default {
         });
     },
   },
-
   computed: {
     filtered() {
       return this.dischi.filter(disco => {
-        return disco.genre.toLowerCas().includes(state.musicGenre.toLowerCase());
+        console.log(disco.genre.toLowerCase());
+        console.log(state.musicGenre.toLowerCase());
+        return disco.genre.toLowerCase().includes(state.musicGenre.toLowerCase());
       });
     },
-    mounted() {
+    
+  },
+  mounted() {
       this.callApi();
     }
-  }
 }
-
 </script>
 
 <style lang="scss" scoped>

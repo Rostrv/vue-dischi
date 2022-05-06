@@ -5,20 +5,16 @@
     class="form-select-sm mx-3"
     aria-label=".form-select-sm example" @submit.prevent="$emit('clicca')"
     :value="musicGenre"
-    @change="$emit('input', $event.target.value)"
-    @click="$emit('ChangemusicGenre')">
-      
-
+    @input="$emit('input', $event.target.value)"
+    @change="$emit('changeMusicGenre', musicGenre)">
     <option selected>Seleziona un genere</option>
     <option value="">Tutti</option>
     <option value="rock">Rock</option>
     <option value="pop">Pop</option>
     <option value="jazz">Jazz</option>
     <option value="metal">Metal</option>
-
   </select>
 </div>
-  
 </template>
 
 <script>
@@ -28,10 +24,5 @@ export default {
     musicGenre: String
   }
 };
-
 </script>
 
-<style lang="scss" scoped>
-
-
-</style>

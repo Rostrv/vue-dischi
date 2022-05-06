@@ -8,11 +8,9 @@
     </div>
   </header>
 </template>
-
 <script>
 import SelectFilter from "@/components/SelectFilter.vue";
 import state from "@/state.js";
-
 export default {
   name: "SiteHeader",
   components: {
@@ -32,8 +30,6 @@ export default {
   },
 };
 </script>
-
-
 <style lang="scss" scoped>
 .top {
   background-color: #2f3a47;
