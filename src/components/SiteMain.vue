@@ -5,7 +5,7 @@
         <div class="row justify-content-evenly">
           <div
             class="col-2 mx-1 mb-3"
-            v-for="(disco, index) in dischi"
+            v-for="(disco, index) in filtered"
             :key="index"
           >
             <div class="card border-0" style="">
@@ -37,6 +37,7 @@
 
 <script>
 import axios from "axios";
+import state from "@/state.js";
 
 export default {
   name: "SiteMain",
@@ -55,7 +56,6 @@ export default {
       axios
         .get(this.API_URL)
         .then((response) => {
-          console.log(response);
           this.dischi = response.data.response;
           this.loading = false;
         })
@@ -65,8 +65,16 @@ export default {
         });
     },
   },
-  mounted() {
-    this.callApi();
+
+  computed: {
+    filtered() {
+      return this.dischi.filter(disco => {
+        return disco.genre.toLowerCas().includes(state.musicGenre.toLowerCase());
+      });
+    },
+    mounted() {
+      this.callApi();
+    },
   },
 };
 </script>
