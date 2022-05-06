@@ -4,7 +4,7 @@
       <div class="img_container">
         <img src="@/assets/spotify-logo.png" alt="" />
       </div>
-      <SelectFilter v-model="musicGenre" @clicca="search" />
+      <SelectFilter v-model="musicGenre" @changeMusicGenre="musicGenre" />
     </div>
   </header>
 </template>

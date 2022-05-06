@@ -74,9 +74,10 @@ export default {
     },
     mounted() {
       this.callApi();
-    },
-  },
-};
+    }
+  }
+}
+
 </script>
 
 <style lang="scss" scoped>

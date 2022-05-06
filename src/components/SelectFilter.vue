@@ -5,8 +5,8 @@
     class="form-select-sm mx-3"
     aria-label=".form-select-sm example" @submit.prevent="$emit('clicca')"
     :value="musicGenre"
-    @input="$emit('input', $event.target.value)"
-    @click="$emit('clicca',musicGenre)">
+    @change="$emit('input', $event.target.value)"
+    @click="$emit('ChangemusicGenre')">
       
 
     <option selected>Seleziona un genere</option>
