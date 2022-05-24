@@ -32,7 +32,7 @@ img{
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
+ min-height: 100vh;
   background-color: #1e2c3a;
 }
 </style>

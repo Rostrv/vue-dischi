@@ -41,7 +41,7 @@ export default {
   name: "SiteMain",
   data() {
     return {
-      API_URL: "https://flynn.boolean.careers/exercises/api/array/music",
+      API_URL: "http://localhost/php/db.php",
       disco: Object,
       dischi: null,
       loading: true,
@@ -53,7 +53,7 @@ export default {
       axios
         .get(this.API_URL)
         .then((response) => {
-          this.dischi = response.data.response;
+          this.dischi = response.data;
           this.loading = false;
         })
         .catch((error) => {
