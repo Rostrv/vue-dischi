@@ -71,6 +71,13 @@
             "genre"=> "Pop",
             "year"=> "1987"
         ],
+        [
+            "poster"=> "https://m.media-amazon.com/images/I/81VuUMKZrIL._AC_SL1425_.jpg",
+            "title"=> "Vulgar display of power",
+            "author"=> "Pantera",
+            "genre"=> "Metal",
+            "year"=> "1992"
+        ],
     ];
 
 
